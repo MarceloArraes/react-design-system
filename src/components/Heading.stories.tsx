@@ -1,32 +1,32 @@
-import { Text, TextProps } from "./Text";
+import { Heading, HeadingProps } from "./Heading";
 import { Meta, StoryObj } from "@storybook/react";
 
 export default {
-  component: Text,
-  title: "components/Text",
+  component: Heading,
+  title: "components/Heading",
   args: {
     children: "Children man",
   },
   argTypes: {
     size: {
-      options: ["sm", "md", "lg"],
+      options: ["lg", "xl", "2xl"],
       control: {
         type: "inline-radio",
       },
     },
   },
-} as Meta<TextProps>;
+} as Meta<HeadingProps>;
 
-export const TextDefault: StoryObj = {};
+export const HeadingDefault: StoryObj = {};
 
-export const TextSmall: StoryObj = {
-  args: {
-    size: "sm",
-  },
-};
-export const TextLarge: StoryObj = {
+export const HeadingLarge: StoryObj = {
   args: {
     size: "lg",
+  },
+};
+export const HeadingXLarge: StoryObj = {
+  args: {
+    size: "xl",
   },
 };
 export const CustomComponent: StoryObj = {
@@ -48,4 +48,4 @@ export const CustomComponent: StoryObj = {
   },
 };
 
-// () => <Text size="lg">Children of the world</Text>;
+// () => <Heading size="lg">Children of the world</Heading>;
