@@ -4,7 +4,10 @@ import { Meta, StoryObj } from "@storybook/react";
 export default {
   component: TextInput,
   title: "components/TextInput",
-  args: {},
+  args: {
+    placeholder: "type your email",
+    type: "email",
+  },
   argTypes: {},
 } as Meta<TextInputProps>;
 

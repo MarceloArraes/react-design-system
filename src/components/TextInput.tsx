@@ -1,22 +1,24 @@
-import { ReactNode } from "react";
+import { InputHTMLAttributes, ReactNode } from "react";
 import { clsx } from "clsx";
 
-export interface TextInputProps {
-  size?: "sm" | "md" | "lg";
+export interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {}
+
+interface TextInputRootProps {
   children: ReactNode;
 }
 
-export function TextInput({ size = "md", children }: TextInputProps) {
+const TextInputRoot = ({ children }: TextInputRootProps) => {
   return (
-    <input
-      className={clsx(
-        "placeholder:text-gray-400 focus:ring-2 ring-black font-sans py-4 px-3 bg-gray-800 rounded text-gray-100 text-xs w-full",
-        {
-          "text-xs": size == "sm",
-          "text-sm": size == "md",
-          "text-md": size == "lg",
-        }
-      )}
-    />
+    <div className="focus:ring-2 ring-cyan-300 outline-none placeholder:text-gray-400 font-sans py-4 px-3 bg-gray-800 rounded text-gray-100 text-xs w-full">
+      {children}
+    </div>
+  );
+};
+
+export function TextInput({ ...props }: TextInputProps) {
+  return (
+    <div className="focus:ring-2 ring-cyan-300 outline-none placeholder:text-gray-400 font-sans py-4 px-3 bg-gray-800 rounded text-gray-100 text-xs w-full">
+      <input className={clsx("")} {...props} />
+    </div>
   );
 }
