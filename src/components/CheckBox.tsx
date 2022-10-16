@@ -3,9 +3,10 @@ import { Check } from "phosphor-react";
 
 export interface CheckBoxProps {
   text?: string;
+  className?: string;
 }
 
-export const CheckBox = ({ text }: CheckBoxProps) => (
+export const CheckBox = ({ text, className }: CheckBoxProps) => (
   <div className="flex justify-center">
     <CheckboxPrimitive.Root
       id="c1"
@@ -15,7 +16,7 @@ export const CheckBox = ({ text }: CheckBoxProps) => (
         <Check weight="bold" size={20} className="text-cyan-300" />
       </CheckboxPrimitive.Indicator>
     </CheckboxPrimitive.Root>
-    <label className="pl-4" htmlFor="c1">
+    <label className={className} htmlFor="c1">
       {text}
     </label>
   </div>
