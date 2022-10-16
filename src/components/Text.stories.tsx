@@ -33,6 +33,7 @@ export const CustomComponent: StoryObj = {
   args: {
     asChild: true,
     children: <p>PARAGRAFO</p>,
+    className: "text-gray-400",
   },
   argTypes: {
     children: {

@@ -7,6 +7,7 @@ export default {
   title: "components/CheckBox",
   args: {
     text: "Aceitar termos de uso.",
+    className: "pl-4",
   },
   /*   decorators: [
     (Story) => {
