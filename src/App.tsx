@@ -48,7 +48,7 @@ export function App() {
 
         <label htmlFor="remember" className="flex items-center gap-2 ">
           <CheckBox
-            className="text-gray-200 text-sm pl-4"
+            className="text-gray-200 text-sm"
             text="Lembrar de mim por 30 dias"
           />
         </label>
