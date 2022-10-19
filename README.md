@@ -10,7 +10,8 @@ We used composition for some components like TextInput what made even mode modul
 1. Reactjs
 2. Tailwindcss
 3. radixUi
-4. Icons from phosphor-react
-5. clsx to stich toguether the css
+4. storybook
+5. Icons from phosphor-react
+6. clsx to stich toguether the css
 
 ---
