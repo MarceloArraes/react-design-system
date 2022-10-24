@@ -10,7 +10,7 @@ export default {
 } as Meta;
 
 export const SigninDefault: StoryObj = {
-  play: ({ canvasElement }) => {
+  play: ({ canvasElement }: any) => {
     const canvas = within(canvasElement);
 
     userEvent.type(
