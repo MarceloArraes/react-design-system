@@ -7,10 +7,11 @@ module.exports = {
     "@storybook/addon-a11y",
     "@storybook/addon-interactions",
   ],
-  framework: "@storybook/react",
-  core: {
-    builder: "@storybook/builder-vite",
+  framework: {
+    name: "@storybook/react-vite",
+    options: {},
   },
+  core: { builder: "@storybook/builder-vite" },
   features: {
     storyStoreV7: true,
     interactionsDebugger: true,
